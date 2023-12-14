@@ -60,7 +60,7 @@
                         $divisionrank = $team['rank']['division'];
                         
 
-                        // Output team data in table rows
+
                                 echo "<tr>
                                 <td>$city</td>
                                 <td>$name</td>
