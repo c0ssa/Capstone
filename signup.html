@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MLB Live Updates</title>
+  <link rel="stylesheet" href="homePageLayout.css">
+</head>
+<body>
+  <header>
+    <h1>Major League Baseball Live Updates</h1>
+    <nav>
+      <ul>
+        <li><a href="homePage.php">Home</a></li>
+        <li><a href="teams.php">Team Rosters</a></li>
+        <li><a href="standings.php">Standings</a></li>
+        <li><a href="login.php">Login to MLB</a></li>
+      </ul>
+    </nav>
+  </header>
+  <br>
+  <br>
+  <br>
+  <br>
+<h3>Sign Up</h3>
+  <form action="signupServer.php" method="post">
+      <label for="newUsername">New Username:</label>
+      <input type="text" id="newUsername" name="newUsername" required><br><br>
+
+      <label for="newPassword">New Password:</label>
+      <input type="password" id="newPassword" name="newPassword" required><br><br>
+
+      <label for="confirmPassword">Confirm Password:</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
+
+      <p>Select a team from the list:</p>
+      <select id="newTeams" name="newTeams">
+      <option value="">Team</option>
+      <option value="ARI">Arizona Diamondbacks</option>
+      <option value="ATL">Atlanta Braves</option>
+      <option value="BAL">Baltimore Orioles</option>
+      <option value="BOS">Boston Red Sox</option>
+      <option value="CHC">Chicago Cubs</option>
+      <option value="CWS">Chicago White Sox</option>
+      <option value="CIN">Cincinnati Reds</option>
+      <option value="CLE">Cleveland Guardians</option>
+      <option value="COL">Colorado Rockies</option>
+      <option value="DET">Detroit Tigers</option>
+      <option value="HOU">Houston Astros</option>
+      <option value="KC">Kansas City Royals</option>
+      <option value="LAA">Los Angeles Angels</option>
+      <option value="LAD">Los Angeles Dodgers</option>
+      <option value="MIA">Miami Marlins</option>
+      <option value="MIL">Milwaukee Brewers</option>
+      <option value="MIN">Minnesota Twins</option>
+      <option value="NYM">New York Mets</option>
+      <option value="NYY">New York Yankees</option>
+      <option value="OAK">Oakland Athletics</option>
+      <option value="PHI">Philadelphia Phillies</option>
+      <option value="PIT">Pittsburgh Pirates</option>
+      <option value="SD">San Diego Padres</option>
+      <option value="SF">San Francisco Giants</option>
+      <option value="SEA">Seattle Mariners</option>
+      <option value="STL">St. Louis Cardinals</option>
+      <option value="TB">Tampa Bay Rays</option>
+      <option value="TEX">Texas Rangers</option>
+      <option value="TOR">Toronto Blue Jays</option>
+      <option value="WSH">Washington Nationals</option>
+      </select>
+
+      <a href="homePage.php"><input type="button" value="Sign Up"></a>
+  </form>
