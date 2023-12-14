@@ -24,29 +24,25 @@
   
   <?php
    
-// Replace 'YOUR_API_KEY' and 'GAME_ID' with your actual API key and the specific game ID
-// Assuming you have fetched the game ID from the URL parameter
 if (isset($_GET['game_id'])) {
     $gameId = $_GET['game_id'];
 
-    // Replace 'YOUR_API_KEY' with your actual API key
+
     $api_key = 'cm4garusc6vybbj8k635bd24';
     $api_url = "http://api.sportradar.us/mlb/trial/v7/en/games/{$gameId}/summary.json?api_key={$api_key}";
 
-    // Initialize cURL session
-    $ch = curl_init($api_url);
 
-    // Set cURL options
+    $ch = curl_init($api_url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-    // Execute cURL session and fetch response data
+
     $response_json = curl_exec($ch);
 
-    // Check if request was successful
+
     if ($response_json === false) {
         echo "Error occurred: " . curl_error($ch);
     } else {
-        // Decode the JSON response
+
         $boxScoreData = json_decode($response_json, true);
 
         if ($boxScoreData !== null && isset($boxScoreData['game']['away']['players']) && isset($boxScoreData['game']['home']['players'])) {
@@ -114,7 +110,7 @@ if (isset($_GET['game_id'])) {
         }
     }
 
-    // Close cURL session
+
     curl_close($ch);
 } else {
     echo "No game ID specified.";
